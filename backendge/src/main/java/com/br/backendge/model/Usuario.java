@@ -1,11 +1,16 @@
 package com.br.backendge.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -27,6 +32,12 @@ public class Usuario {
 	private boolean pcd;
 	@Column(name="DS_PCD")
 	private String descricaoPcd;
+	
+	@ManyToMany(fetch = FetchType.EAGER)
+	@JoinTable(name = "USUARIO_PERMISSAO", joinColumns = @JoinColumn(name = "ID_USUARIO"), 
+		inverseJoinColumns = @JoinColumn(name = "ID_PERMISSAO"))
+	private List<Permissao> permissoes;
+	
 	@Column(name="ST_ATIVO")
 	private boolean ativo;
 	
@@ -98,6 +109,15 @@ public class Usuario {
 		this.perfil = perfil;
 	}
 
+	public List<Permissao> getPermissoes() {
+		return permissoes;
+	}
+
+	public void setPermissoes(List<Permissao> permissoes) {
+		this.permissoes = permissoes;
+	}
+
+	
 
 	
 	
