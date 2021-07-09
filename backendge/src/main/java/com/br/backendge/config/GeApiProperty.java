@@ -17,59 +17,39 @@ public class GeApiProperty {
 		return originPermitida;
 	}
 
-
-
 	public void setOriginPermitida(String originPermitida) {
 		this.originPermitida = originPermitida;
 	}
-
-
 
 	public String getUrlDesenv() {
 		return urlDesenv;
 	}
 
 
-
 	public void setUrlDesenv(String urlDesenv) {
 		this.urlDesenv = urlDesenv;
 	}
-
-
 
 	public String getUrlMobile() {
 		return urlMobile;
 	}
 
-
-
 	public void setUrlMobile(String urlMobile) {
 		this.urlMobile = urlMobile;
 	}
-
-
 
 	public Seguranca getSeguranca() {
 		return seguranca;
 	}
 	
 	
-
-
-
 	public String getUrlProducao() {
 		return urlProducao;
 	}
 
-
-
 	public void setUrlProducao(String urlProducao) {
 		this.urlProducao = urlProducao;
 	}
-
-
-
-
 
 	public static class Seguranca {
 

@@ -24,9 +24,11 @@ public class Usuario {
 	private Long id;
 	@Column(name="NM_NOME")
 	private String nome;
-	@Column(name="LG_EMAIL")
+	@Column(name="NM_LOGIN")
+	private String login;
+	@Column(name="NM_EMAIL")
 	private String email;
-	@Column(name="PW_SENHA")
+	@Column(name="NR_SENHA")
 	private String senha;
 	@Column(name="ST_PCD")
 	private boolean pcd;
@@ -115,6 +117,14 @@ public class Usuario {
 
 	public void setPermissoes(List<Permissao> permissoes) {
 		this.permissoes = permissoes;
+	}
+
+	public String getLogin() {
+		return login;
+	}
+
+	public void setLogin(String login) {
+		this.login = login;
 	}
 
 	

@@ -24,7 +24,7 @@ import com.br.backendge.config.GeApiProperty;
 public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
 	@Autowired
-	private GeApiProperty property;
+	private GeApiProperty propertiy;
 	
 	@Override
 	public void configure(HttpSecurity http) throws Exception {
@@ -55,7 +55,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 		config.addAllowedHeader("*");
 		config.addAllowedMethod("*");
 		config.setMaxAge(3600L);
-		config.setAllowedOrigins(Arrays.asList(this.property.getUrlProducao(), this.property.getUrlMobile(), this.property.getUrlDesenv()));
+		config.setAllowedOrigins(Arrays.asList(this.propertiy.getUrlProducao(), this.propertiy.getUrlMobile(), this.propertiy.getUrlDesenv()));
 		
 		UrlBasedCorsConfigurationSource  source = new UrlBasedCorsConfigurationSource();
 		source.registerCorsConfiguration("/**", config);

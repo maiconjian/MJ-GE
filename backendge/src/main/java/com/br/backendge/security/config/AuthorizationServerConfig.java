@@ -22,6 +22,7 @@ import org.springframework.web.filter.CorsFilter;
 import com.br.backendge.security.token.CustomTokenEnhancer;
 
 
+
 @Profile("oauth-security")
 @Configuration
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {

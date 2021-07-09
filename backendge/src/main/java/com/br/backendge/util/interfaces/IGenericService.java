@@ -1,4 +1,4 @@
-package com.br.backendge.generic;
+package com.br.backendge.util.interfaces;
 
 import java.util.List;
 
